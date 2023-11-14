@@ -6,47 +6,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     
-    
     <style>
-body {background: white; color: darkgray}
-#content {margin: 0 auto; text-align: center; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 20px; }
-img {border: 1px solid white; height: 100px;}
-#countdown {font-size: 30px; margin-top: 20px;}
-button {margin-top: 20px; padding: 10px 20px; border: 1px solid darkgray; background: white; color: darkgray; font-size: 20px; cursor: pointer; border-radius: 5px;}
-button:hover {background: darkgray; color: white;}    
+        body {background: white; color: darkgray}
+        #content {margin: 0 auto; text-align: center; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 20px; }
+        img {border: 1px solid white; height: 100px;}
+        #countdown {font-size: 30px; margin-top: 20px;}
+        button {margin-top: 20px; padding: 10px 20px; border: 1px solid darkgray; background: white; color: darkgray; font-size: 20px; cursor: pointer; border-radius: 5px;}
+        button:hover {background: darkgray; color: white;}    
     </style>
-
-  
 </head>
 <body>
-  <div id="content">
-    <div><img src="/Images/ArecoGranosLogo.png"></div>
-    <div>Areco Granos es la división de acopio de</div>
-    <div style="margin-top: 30px;"><a href="https://www.sinergizagro.com"><img src="/Images/LogoSinergizagroConTextoGrande.png" style="height: 80px"></a></div>
-    <div id="countdown"></div>
-    <button id="redirect-btn">Ir a www.sinergizagro.com</button>
-  </div>
+    <div id="content">
+        <div><img src="/Images/ArecoGranosLogo.png"></div>
+        <div>Areco Granos es la divisiÃ³n de acopio de</div>
+        <div style="margin-top: 30px;"><a href="https://www.sinergizagro.com"><img src="/Images/LogoSinergizagroConTextoGrande.png" style="height: 80px"></a></div>
+        <div id="countdown"></div>
+        <button id="redirect-btn">Ir a www.sinergizagro.com</button>
+    </div>
 
-  <script>
-    let seconds = 30;
-    let countdown = document.getElementById("countdown");
-    let redirectBtn = document.getElementById("redirect-btn");
+    <script>
+        let seconds = 30;
+        let countdown = document.getElementById("countdown");
+        let redirectBtn = document.getElementById("redirect-btn");
 
-    let intervalId = setInterval(() => {
-      seconds--;
-      countdown.innerText = seconds;
-      countdown.style.animation = "pulse 1s ease-in-out";
-      if (seconds === 0) {
-        clearInterval(intervalId);
-        window.location.href = "https://www.sinergizagro.com";
-      }
-    }, 1000);
+        let intervalId = setInterval(() => {
+            seconds--;
+            countdown.innerText = seconds;
+            countdown.style.animation = "pulse 1s ease-in-out";
+            if (seconds === 0) {
+            clearInterval(intervalId);
+            window.location.href = "https://www.sinergizagro.com";
+            }
+        }, 1000);
 
-    redirectBtn.addEventListener("click", () => {
-      clearInterval(intervalId);
-      window.location.href = "https://www.sinergizagro.com";
-    });
-  </script>
-
+        redirectBtn.addEventListener("click", () => {
+            clearInterval(intervalId);
+            window.location.href = "https://www.sinergizagro.com";
+        });
+    </script>
 </body>
 </html>
